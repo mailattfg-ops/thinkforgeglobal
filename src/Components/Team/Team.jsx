@@ -7,22 +7,10 @@ import { motion } from "framer-motion";
 const teamMembers = [
   { name: "CA Praveen P K", title: "Chief Executive Officer", image: "/Image/Team/praveen.webp", linkedin: "https://www.linkedin.com/in/ca-praveen-p-k-96553b10a/" },
   { name: "Mohammed Shafas", title: "Business And Ops", image: "/Image/Team/shafas.webp", linkedin: "https://www.linkedin.com/in/mohammed-shafas/" },
-  { name: "Nijith Nirmal", title: "Senior Product Designer", image: "/Image/Team/nijith.webp", linkedin: "https://www.linkedin.com/in/nijith-nirmal-b90044175/" },
-  { name: "Fathimath Sithara", title: "Business Development Executive", image: "/Image/Team/sithara.webp", linkedin: "https://www.linkedin.com/in/fathimath-sithara-10676812a" },
-  { name: "Ullas Raj", title: "Senior Developer", image: "/Image/Team/ullas.webp", linkedin: "https://www.linkedin.com/in/ullas-raj-4a5808169" },
-  { name: "Midhun S Paratharayil", title: "Senior Quality Analyst", image: "/Image/Team/midhun.webp", linkedin: "https://www.linkedin.com/in/midhunsparatharayil" },
+  // { name: "Nijith Nirmal", title: "Senior Product Designer", image: "/Image/Team/nijith.webp", linkedin: "https://www.linkedin.com/in/nijith-nirmal-b90044175/" },
   { name: "Shiju U K", title: "Senior Full Stack Developer", image: "/Image/Team/shiju.webp", linkedin: "https://www.linkedin.com/in/shiju-uk-1a320620a" },
-  {name: "Swadique N", title: "Senior Flutter Developer", image: "/Image/Team/swadique.webp", linkedin: " https://www.linkedin.com/in/swadique-n/"  },
-  { name: "Sadasivan K S", title: "Full Stack Developer", image: "/Image/Team/sadasivan.webp", linkedin: "https://www.linkedin.com/in/sadasivan-ks" },
-  { name: "Mohammed Shijad", title: "Digital Marketing Executive", image: "/Image/Team/shijad.webp", linkedin: "https://www.linkedin.com/in/mohammed-shijad/" },
-  { name: "Goutham Sreeram", title: "UI/UX Designer", image: "/Image/Team/goutham.webp", linkedin: "https://www.linkedin.com/in/goutham-sreeram-sb-2b7661241/" },
+  { name: "Swadique N", title: "Senior Flutter Developer", image: "/Image/Team/swadique.webp", linkedin: " https://www.linkedin.com/in/swadique-n/" },
   { name: "Afnan Mohammed", title: "Full Stack Developer", image: "/Image/Team/afnan.webp", linkedin: "https://www.linkedin.com/in/afnan-mohammed-094268224/" },
-  { name: "Jilsina Parveen", title: "Junior Full Stack Developer", image: "/Image/Team/jilsina.webp", linkedin: "https://www.linkedin.com/in/jilsina-parveen-k-v-368304315" },
-  { name: "Annmariya Wilson", title: "Junior Full Stack Developer", image: "/Image/Team/Ann.webp", linkedin: "https://www.linkedin.com/in/annmariya-wilson/" },
-  { name: "Mohammed Asif", title: "Junior Full Stack Developer", image: "/Image/Team/asif.webp", linkedin: "https://www.linkedin.com/in/asifap" },
-  { name: "Fathimathu Shaimah", title: "UI/UX Designer", image: "/Image/Team/shaimah.webp", linkedin: "https://www.linkedin.com/in/fathimathu-shaimah" },
-  { name: "Gokul Kiran R", title: "AI Tools Product Developer Trainee", image: "/Image/Team/gokul.webp", linkedin: "https://www.linkedin.com/in/gokulkiranr" },
-  {name: "Nisnaya P K", title: "Quality Analyst", image:"/Image/Team/nisnaya.webp", linkedin:"https://www.linkedin.com/in/nisnaya-pk-193098360/"}
 ];
 
 
@@ -55,7 +43,7 @@ const logos = [
   { name: "Gnom", src: "/Image/Logo/Gnom.webp" },
   { name: "Day Off", src: "/Image/Logo/dayOff.webp" },
   { name: "Salmara", src: "/Image/Logo/salamara_icon.webp" },
-  {name:"scale Up", src: "/Image/Logo/scale_india.webp"}
+  { name: "scale Up", src: "/Image/Logo/scale_india.webp" }
 ];
 
 const LogoImage = ({ logo, index }) => {
@@ -64,10 +52,10 @@ const LogoImage = ({ logo, index }) => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
-      transition={{ 
-        duration: 0.5, 
-        delay: (index % 10) * 0.05, 
-        ease: "easeOut" 
+      transition={{
+        duration: 0.5,
+        delay: (index % 10) * 0.05,
+        ease: "easeOut"
       }}
       className="relative group flex items-center justify-center p-6 bg-white/40 backdrop-blur-xl border border-white/30 rounded-2xl shadow-lg shadow-black/5 hover:shadow-2xl hover:bg-white/60 hover:scale-[1.02] transition-all duration-500 overflow-hidden"
     >
@@ -106,7 +94,7 @@ export default function Team() {
                 alt={member.name}
                 width="260"
                 height="240"
-                loading={index < 2 ? "eager" : "lazy"}  
+                loading={index < 2 ? "eager" : "lazy"}
                 className="w-full h-60 object-cover object-top rounded-xl"
               />
 
@@ -133,13 +121,13 @@ export default function Team() {
             <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-red-500 my-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 14c4.418 0 8 1.79 8 4v2H4v-2c0-2.21 3.582-4 8-4zM12 12a4 4 0 100-8 4 4 0 000 8z" />
             </svg>
-           <HashLink
-  smooth
-  to="/careers#open-positions"
-  className="mt-4 bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition"
->
-  Apply Now
-</HashLink>
+            <HashLink
+              smooth
+              to="/careers#open-positions"
+              className="mt-4 bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition"
+            >
+              Apply Now
+            </HashLink>
 
           </div>
         </div>
@@ -149,14 +137,14 @@ export default function Team() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-cal-sans mb-8">
             Trusted by <span className="text-red-500">Industry Leaders</span>
           </h2>
-          
+
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 max-w-7xl mx-auto">
             {logos.map((logo, index) => (
               <LogoImage key={index} logo={logo} index={index} />
             ))}
 
             {/* Creative CTA Slot to fill the grid (29 logos + 1 CTA = 30 slots / 5 cols = 6 full rows) */}
-            <HashLink 
+            <HashLink
               smooth
               to="/connect#connect"
               className="group flex flex-col items-center justify-center p-6 bg-white/40 backdrop-blur-xl border border-white/30 rounded-2xl shadow-lg shadow-black/5 hover:shadow-2xl hover:bg-red-500 hover:text-white transition-all duration-500 text-center"
